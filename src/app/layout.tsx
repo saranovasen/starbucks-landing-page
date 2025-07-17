@@ -1,17 +1,20 @@
 import type { Metadata } from 'next';
 
-import { Roboto } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
+
+import { Header } from '@/components/Header';
 
 import './globals.css';
 
-const roboto = Roboto({
-  variable: '--font-roboto',
+const montserrat = Montserrat({
+  variable: '--font-montserrat',
   subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: 'Project Title',
-  description: 'Project description goes here',
+  title: 'Starbucks New Cafe',
+  description:
+    "Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount!",
 };
 
 export default function RootLayout({
@@ -20,8 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={roboto.variable}>
-      <body>{children}</body>
+    <html lang="en" className={montserrat.variable}>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

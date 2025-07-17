@@ -1,25 +1,48 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #121517;
+  --main-text: #ffffff;
+  --text: #d9d9d9;
+  --text-dark: #121517;
+
+  --font-montserrat: 'Montserrat', Helvetica, sans-serif;
+
+  --gradient-green: linear-gradient(90deg, #237249 0%, #35c66b 100%);
+  --gradient-ui: linear-gradient(315deg, #237249 0%, #35c66b 100%);
+  --gradient-background: linear-gradient(315deg, #237249 55%, #35c66b 73%);
+  --gradient-light: linear-gradient(
+    45deg,
+    #ffffff 4%,
+    #e5e5e5 64%,
+    #fbfbfb 89%
+  );
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-roboto: var(--font-roboto);
+  --color-main-text: var(--main-text);
+  --color-text: var(--text);
+  --color-text-dark: var(--text-dark);
+
+  --font-montserrat: var(--font-montserrat);
+
+  --color-bg-gradient-green: var(--gradient-green);
+  --color-bg-ui-gradient: var(--gradient-ui);
+  --color-gradient-page: var(--gradient-background);
+  --color-bg-gradient-light: var(--gradient-light);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .bg-ui-gradient {
+    background-image: var(--color-bg-ui-gradient);
+  }
+  .color-bg-ui-gradient {
+    background-image: var(--color-bg-ui-gradient);
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat);
 }
