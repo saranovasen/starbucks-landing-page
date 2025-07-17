@@ -1,34 +1,58 @@
 'use client';
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+import { BurgerMenuContent } from './BurgerMenuContent';
 
 export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [isOpen]);
+
   return (
-    <button
-      onClick={() => setIsOpen(!isOpen)}
-      aria-label="Toggle menu"
-      className="relative flex h-5 flex-col gap-2 items-center justify-center border-none cursor-pointer"
-    >
-      <span
+    <div className="relative z-50 md:hidden">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle menu"
         className={clsx(
-          'block absolute top-0 h-[2px] w-10 bg-ui-gradient transition-all duration-300 ease-in-out',
-          isOpen && 'top-2 w-5 -rotate-45 '
+          'relative z-50 flex h-5 cursor-pointer',
+          'flex-col items-center justify-center gap-2 border-none'
         )}
-      />
-      <span
-        className={clsx(
-          'block h-[2px] w-10 bg-ui-gradient transition-transform duration-300 ease-in-out',
-          isOpen && 'opacity-0'
-        )}
-      />
-      <span
-        className={clsx(
-          'block absolute bottom-0 h-[2px] w-10 bg-ui-gradient transition-all duration-300 ease-in-out',
-          isOpen && 'top-2 w-2 -rotate-135'
-        )}
-      />
-    </button>
+      >
+        <span
+          className={clsx(
+            'bg-ui-gradient absolute top-0 block h-[2px] w-10',
+            'transition-all duration-300 ease-in-out',
+            isOpen && 'top-2 w-5 -rotate-45'
+          )}
+        />
+        <span
+          className={clsx(
+            'bg-ui-gradient block h-[2px] w-10',
+            'transition-transform duration-300 ease-in-out',
+            isOpen && 'opacity-0'
+          )}
+        />
+        <span
+          className={clsx(
+            'bg-ui-gradient absolute bottom-0 block h-[2px] w-10',
+            'transition-all duration-300 ease-in-out',
+            isOpen && 'top-2 w-2 -rotate-135'
+          )}
+        />
+      </button>
+
+      <BurgerMenuContent isOpen={isOpen} />
+    </div>
   );
 };
