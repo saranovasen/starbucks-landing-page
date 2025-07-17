@@ -2,9 +2,11 @@
 
 :root {
   --background: #121517;
+  --background-secondary: #0b0c0d;
   --main-text: #ffffff;
   --text: #d9d9d9;
   --text-dark: #121517;
+  --text-secondary: #bbb3b3;
 
   --font-montserrat: 'Montserrat', Helvetica, sans-serif;
 
@@ -21,9 +23,11 @@
 
 @theme {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-main-text: var(--main-text);
   --color-text: var(--text);
   --color-text-dark: var(--text-dark);
+  --color-text-secondary: var(--text-secondary);
 
   --font-montserrat: var(--font-montserrat);
 
@@ -40,9 +44,17 @@
   .color-bg-ui-gradient {
     background-image: var(--color-bg-ui-gradient);
   }
+
+  .w-49 {
+    width: 12.25rem; /* 196px */
+  }
 }
 
 body {
   background: var(--background);
   font-family: var(--font-montserrat);
+}
+
+html {
+  scroll-behavior: smooth;
 }

@@ -7,7 +7,7 @@ export const Container = ({
 }) => {
   return (
     <div
-      className={`w-full mx-auto px-[5vw] xl:px-[10vw] 2xl:px-[15vw] ${className}`}
+      className={`mx-auto w-full px-[5vw] xl:px-[7vw] 2xl:px-[10vw] ${className}`}
     >
       {children}
     </div>
