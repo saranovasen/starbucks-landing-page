@@ -13,7 +13,7 @@ export const Nav = ({
 }: NavProps) => {
   return (
     <nav className={`${className}`}>
-      <ul className={`flex text-xl text-[var(--color-text)] ${listClassName}`}>
+      <ul className={`text-l flex text-[var(--color-text)] ${listClassName}`}>
         {items.map((item, index) => (
           <li key={index}>
             <a href={item.href} className="hover:underline">

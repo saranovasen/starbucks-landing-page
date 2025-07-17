@@ -23,7 +23,7 @@ export const Footer = () => {
           {footerSections.map((section, sectionIndex) => (
             <ul
               key={sectionIndex}
-              className="space-y-3 text-sm whitespace-nowrap lg:text-xl"
+              className="lg:text-l space-y-3 text-sm whitespace-nowrap"
             >
               {section.links.map((link, linkIndex) => (
                 <li key={linkIndex}>
