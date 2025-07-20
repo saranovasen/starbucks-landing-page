@@ -10,6 +10,8 @@ import './globals.css';
 const montserrat = Montserrat({
   variable: '--font-montserrat',
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -24,11 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={montserrat.variable}>
-      <body>
+    <html lang="en" className={`${montserrat.variable} h-full`}>
+      <body className="flex min-h-screen flex-col">
         <div id="top"></div>
         <Header />
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>

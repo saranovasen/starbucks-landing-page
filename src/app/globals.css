@@ -7,12 +7,18 @@
   --text: #d9d9d9;
   --text-dark: #121517;
   --text-secondary: #bbb3b3;
-
-  --font-montserrat: 'Montserrat', Helvetica, sans-serif;
+  --text-big: 2.6rem;
+  --text-hero: 5rem;
 
   --gradient-green: linear-gradient(90deg, #237249 0%, #35c66b 100%);
   --gradient-ui: linear-gradient(315deg, #237249 0%, #35c66b 100%);
-  --gradient-background: linear-gradient(315deg, #237249 55%, #35c66b 73%);
+  --gradient-background: linear-gradient(
+    315deg,
+    rgba(35, 114, 73, 0.55) 0%,
+    rgba(53, 198, 107, 0.73) 55%
+  );
+
+  --gradient-dark: linear-gradient(170deg, #dadada 0%, transparent 100%);
   --gradient-light: linear-gradient(
     45deg,
     #ffffff 4%,
@@ -28,13 +34,12 @@
   --color-text: var(--text);
   --color-text-dark: var(--text-dark);
   --color-text-secondary: var(--text-secondary);
-
-  --font-montserrat: var(--font-montserrat);
-
   --color-bg-gradient-green: var(--gradient-green);
   --color-bg-ui-gradient: var(--gradient-ui);
   --color-gradient-page: var(--gradient-background);
   --color-bg-gradient-light: var(--gradient-light);
+  --text-big: var(--text-big);
+  --text-hero: var(--text-hero);
 }
 
 @layer utilities {
@@ -45,14 +50,75 @@
     background-image: var(--color-bg-ui-gradient);
   }
 
-  .w-49 {
-    width: 12.25rem; /* 196px */
+  .text-gradient-green {
+    background: var(--color-bg-ui-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
+
+  .border-gradient-green {
+    border: 2px solid;
+    border-image: var(--gradient-ui) 1;
+    border-radius: 2rem;
+  }
+
+  .border-gradient-dark {
+    position: relative;
+    border: 1px solid transparent;
+    background:
+      linear-gradient(var(--background), var(--background)) padding-box,
+      var(--gradient-dark) border-box;
+  }
+
+  /* .hero-gradient-ellipse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: var(--gradient-background);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.2;
+  } */
+
+  /* .hero-image-with-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/svg/ui-elements/wave-lines-hero.svg');
+    background-repeat: no-repeat;
+    background-position: right top 7rem;
+    background-size: contain;
+    z-index: -2;
+    pointer-events: none;
+  } */
 }
 
 body {
   background: var(--background);
-  font-family: var(--font-montserrat);
+  font-family: var(--font-montserrat), 'Montserrat', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: -0.03em;
+    font-family: var(--font-montserrat), 'Montserrat', Helvetica, sans-serif;
+  }
+  p {
+    letter-spacing: -0.02em;
+    font-family: var(--font-montserrat), 'Montserrat', Helvetica, sans-serif;
+  }
 }
 
 html {
