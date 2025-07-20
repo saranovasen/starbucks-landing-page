@@ -9,12 +9,16 @@ export const Footer = () => {
       <Container className="flex flex-col items-center gap-9 py-[5vw] md:flex-row md:items-start md:justify-between md:gap-25">
         <div className="flex w-full items-center justify-between md:block md:w-auto">
           <Image
+            width={256}
+            height={344}
             src="assets/svg/logos/logo.svg"
             alt="Starbucks Logo"
             className="h-auto max-w-full md:w-49"
           />
           <a href="#top" aria-label="Back to top" className="md:hidden">
             <Image
+              width={53}
+              height={53}
               src="assets/svg/ui-elements/arrow-up-boxed.svg"
               alt="Back to top"
               className="h-auto max-w-full"
@@ -50,6 +54,8 @@ export const Footer = () => {
           className="hidden md:order-3 md:block"
         >
           <Image
+            width={53}
+            height={53}
             src="assets/svg/ui-elements/arrow-up-boxed.svg"
             alt="Back to top"
             className="h-auto w-21"

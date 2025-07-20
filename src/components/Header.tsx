@@ -10,7 +10,9 @@ export const Header = () => {
       <Container>
         <div className="flex items-center justify-between pt-9 md:justify-start md:space-x-25">
           <Image
-            src="assets/svg/logos/logo.svg"
+            width={130}
+            height={48}
+            src="/assets/svg/logos/logo.svg"
             alt="Starbucks Logo"
             className="h-auto max-w-full md:w-49"
           />

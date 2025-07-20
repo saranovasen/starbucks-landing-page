@@ -5,8 +5,10 @@ export const HeroImageWithTag = ({ className }: { className?: string }) => {
     <div className={`hero-image-with-bg relative mx-auto mb-8 ${className}`}>
       <div className=""></div>
       <Image
+        width={256}
+        height={344}
         className="relative z-10 h-auto w-64 lg:w-90 xl:w-100"
-        src="assets/png/ui-elements/coffee-cup.png"
+        src="/assets/png/ui-elements/coffee-cup.png"
         alt="Cup of Coffee"
       />
       {/* <div className="absolute -top-2 -right-2 z-20 lg:-top-10">
