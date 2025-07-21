@@ -13,7 +13,7 @@ export const Footer = () => {
             height={344}
             src="assets/svg/logos/logo.svg"
             alt="Starbucks Logo"
-            className="h-auto max-w-full md:w-49"
+            className="h-auto w-33 md:w-49"
           />
           <a href="#top" aria-label="Back to top" className="md:hidden">
             <Image
@@ -25,7 +25,7 @@ export const Footer = () => {
             />
           </a>
         </div>
-        <div className="grid w-full [grid-template-columns:repeat(3,min-content)] [justify-content:space-between] md:order-2 md:[grid-template-columns:repeat(5,min-content)]">
+        <div className="grid w-full [grid-template-columns:repeat(3,min-content)] [justify-content:space-between] gap-y-8 md:order-2 md:[grid-template-columns:repeat(5,min-content)]">
           {footerSections.map((section, sectionIndex) => (
             <ul
               key={sectionIndex}

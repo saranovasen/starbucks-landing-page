@@ -7,8 +7,8 @@ export const Hero = () => {
   return (
     <section className="mb-16">
       <Container>
-        <div className="flex flex-col lg:flex lg:flex-row lg:items-center lg:justify-between">
-          <HeroImageWithTag className="lg:order-2" />
+        <div className="flex flex-col md:flex md:flex-row lg:items-center lg:justify-between">
+          <HeroImageWithTag className="md:order-2" />
           <div className="flex flex-col gap-9 lg:w-[60%]">
             <h1 className="lg:text-hero text-5xl font-extrabold text-[var(--color-text)]">
               New Cafe <br />
