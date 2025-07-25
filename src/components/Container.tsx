@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 export const Container = ({
   children,
   className = '',
@@ -7,7 +9,10 @@ export const Container = ({
 }) => {
   return (
     <div
-      className={`mx-auto w-full px-[5vw] xl:px-[7vw] 2xl:px-[10vw] ${className}`}
+      className={clsx(
+        'mx-auto w-full px-[5vw] xl:px-[7vw] 2xl:px-[10vw]',
+        className
+      )}
     >
       {children}
     </div>

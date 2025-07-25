@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import clsx from 'clsx';
 import { Montserrat } from 'next/font/google';
 
 import { Footer } from '@/components/Footer';
@@ -26,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} h-full`}>
+    <html lang="en" className={clsx(montserrat.variable, 'h-full')}>
       <body className="flex min-h-screen flex-col">
         <div id="top"></div>
         <Header />

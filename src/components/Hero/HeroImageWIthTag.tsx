@@ -1,8 +1,9 @@
+import clsx from 'clsx';
 import Image from 'next/image';
 
 export const HeroImageWithTag = ({ className }: { className?: string }) => {
   return (
-    <div className={`hero-image-with-bg relative mx-auto mb-8 ${className}`}>
+    <div className={clsx('relative mx-auto mb-8', className)}>
       <div className=""></div>
       <Image
         width={256}

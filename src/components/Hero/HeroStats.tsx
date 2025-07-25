@@ -1,33 +1,27 @@
+const statsData = [
+  { value: '9k', label: 'Premium\nUsers' },
+  { value: '2k', label: 'Happy\nCustomers' },
+  { value: '28k', label: 'Awards\nWinning' },
+];
+
 export const HeroStats = () => {
   return (
     <div className="flex gap-9">
-      <p className="text-sm text-[var(--color-text)]">
-        <span className="text-big">
-          9k<span className="text-gradient-green">+</span>
-          <br />
-        </span>
-        Premium
-        <br />
-        Users
-      </p>
-      <p className="text-sm text-[var(--color-text)]">
-        <span className="text-big text-normal">
-          2k<span className="text-gradient-green">+</span>
-          <br />
-        </span>
-        Happy
-        <br />
-        Customers
-      </p>
-      <p className="text-sm text-[var(--color-text)]">
-        <span className="text-big">
-          28k<span className="text-gradient-green">+</span>
-          <br />
-        </span>
-        Awards
-        <br />
-        Winning
-      </p>
+      {statsData.map((stat, index) => (
+        <p key={index} className="text-sm text-[var(--color-text)]">
+          <span className="text-big">
+            {stat.value}
+            <span className="text-gradient-green">+</span>
+            <br />
+          </span>
+          {stat.label.split('\n').map((line, lineIndex) => (
+            <span key={lineIndex}>
+              {line}
+              {lineIndex < stat.label.split('\n').length - 1 && <br />}
+            </span>
+          ))}
+        </p>
+      ))}
     </div>
   );
 };

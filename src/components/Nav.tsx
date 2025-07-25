@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import { navItems, type NavItem } from '../data/navigation';
 
 interface NavProps {
@@ -12,11 +14,20 @@ export const Nav = ({
   items = navItems,
 }: NavProps) => {
   return (
-    <nav className={`${className}`}>
-      <ul className={`text-l flex text-[var(--color-text)] ${listClassName}`}>
+    <nav className={clsx(className)}>
+      <ul
+        className={clsx('text-l flex text-[var(--color-text)]', listClassName)}
+      >
         {items.map((item, index) => (
           <li key={index}>
-            <a href={item.href} className="hover:underline">
+            <a
+              href={item.href}
+              className={clsx(
+                'transition-all duration-300',
+                'hover:scale-105 hover:bg-gradient-to-r hover:from-[#35c66b] hover:to-[#237249]',
+                'hover:bg-clip-text hover:text-transparent hover:drop-shadow-sm'
+              )}
+            >
               {item.label}
             </a>
           </li>
