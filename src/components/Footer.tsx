@@ -21,7 +21,7 @@ export const Footer = () => {
           <Image
             width={256}
             height={344}
-            src="assets/svg/logos/logo.svg"
+            src="/assets/svg/logos/logo.svg"
             alt="Starbucks Logo"
             className={clsx('h-auto w-33 md:w-49')}
           />
@@ -29,7 +29,7 @@ export const Footer = () => {
             <Image
               width={53}
               height={53}
-              src="assets/svg/ui-elements/arrow-up-boxed.svg"
+              src="/assets/svg/ui-elements/arrow-up-boxed.svg"
               alt="Back to top"
               className={clsx('h-auto max-w-full')}
             />

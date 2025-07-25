@@ -20,7 +20,11 @@ export const Hero = () => {
           <HeroImageWithTag className={clsx('md:order-2')} />
           <div className={clsx('flex flex-col gap-9 lg:w-[60%]')}>
             <SectionHeader />
-            <DescText />
+            <DescText>
+              Have time to buy the most harmonious drinks in the
+              <br /> new Starbucks coffee and don&apos;t forget about the
+              discount!
+            </DescText>
             <HeroActions />
             <HeroStats />
           </div>

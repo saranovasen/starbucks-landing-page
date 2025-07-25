@@ -1,8 +1,17 @@
-export const DescText = () => {
+type DescTextProps = {
+  children?: React.ReactNode;
+  variant?: 'primary' | 'secondary';
+};
+
+export const DescText = ({ children, variant = 'primary' }: DescTextProps) => {
+  const textColor =
+    variant === 'primary'
+      ? 'text-[var(--color-text)]'
+      : 'text-[var(--text-dark)]';
+
   return (
-    <p className="text-[var(--color-text)] md:w-130">
-      Have time to buy the most harmonious drinks in the new <br />
-      Starbucks coffee and don&apos;t forget about the discount!
+    <p className={`text-xs whitespace-pre-line md:text-xl ${textColor}`}>
+      {children}
     </p>
   );
 };

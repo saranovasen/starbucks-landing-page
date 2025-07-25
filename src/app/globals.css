@@ -46,8 +46,9 @@
   .bg-ui-gradient {
     background-image: var(--color-bg-ui-gradient);
   }
-  .color-bg-ui-gradient {
-    background-image: var(--color-bg-ui-gradient);
+
+  .bg-ui-light {
+    background-image: var(--color-bg-gradient-light);
   }
 
   .text-gradient-green {
