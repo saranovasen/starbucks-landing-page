@@ -15,7 +15,7 @@ export const WeHaveSectionIcon = ({
   return (
     <div
       className={clsx(
-        'related bg-ui-gradient rounded-full p-8',
+        'bg-ui-gradient relative rounded-full p-8',
         'flex items-center justify-center',
         'h-21.5 w-21.5 xl:h-37 xl:w-37'
       )}

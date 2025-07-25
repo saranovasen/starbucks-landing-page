@@ -7,9 +7,9 @@ import { WeHaveSectionIcon } from './WeHaveSectionIcon';
 
 export const WeHaveSection = () => {
   return (
-    <section>
+    <section className="mb-18 md:mb-40">
       <Container>
-        <div className="bg-ui-light mx-auto mb-18 w-[60%] max-w-screen-lg rounded-[1.75rem] px-10.5 py-5 md:w-[80%] xl:px-25 xl:py-10">
+        <div className="bg-ui-light mx-auto w-[60%] max-w-screen-lg rounded-[1.75rem] px-10.5 py-5 md:w-[80%] xl:px-25 xl:py-10">
           <div
             className={clsx(
               'flex flex-col gap-6 md:flex-row md:justify-between'
@@ -27,13 +27,13 @@ export const WeHaveSection = () => {
                     width={item.width}
                   />
                 </div>
-                <h2
+                <h3
                   className={clsx(
                     'text-lg leading-[170%] font-medium md:text-3xl'
                   )}
                 >
                   {item.title}
-                </h2>
+                </h3>
                 <DescText variant="secondary">{item.description}</DescText>
               </div>
             ))}
