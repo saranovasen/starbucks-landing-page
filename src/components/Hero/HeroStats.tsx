@@ -2,7 +2,7 @@ import { statsData } from '../../data/heroStats';
 
 export const HeroStats = () => {
   return (
-    <div className="flex gap-9">
+    <div className="flex justify-between md:justify-start md:gap-9">
       {statsData.map((stat, key) => (
         <p key={key} className="text-sm text-[var(--color-text)] md:text-lg">
           <span className="text-big">

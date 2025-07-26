@@ -9,7 +9,7 @@ export const HeroActions = () => {
       <button
         className={clsx(
           'border-gradient-dark flex-1 cursor-pointer rounded-4xl py-3',
-          'text-base text-[var(--color-main-text)]',
+          'text-sm text-[var(--color-main-text)] md:text-lg',
           'transition-all duration-300 hover:scale-105 hover:bg-white/5 hover:shadow-md'
         )}
       >

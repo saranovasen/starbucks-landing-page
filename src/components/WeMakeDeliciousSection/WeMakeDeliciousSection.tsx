@@ -5,7 +5,7 @@ import { PhotoDecor } from '../PhotoDecor';
 
 export const WeMakeDeliciousSection = () => {
   return (
-    <section className="mb-18 md:mb-40">
+    <section className="mb-18 md:mb-30">
       <Container className="flex flex-col gap-12 md:flex-row md:justify-between">
         <PhotoDecor
           decorSrc="/assets/svg/ui-elements/reactangle-photo-decor.svg"

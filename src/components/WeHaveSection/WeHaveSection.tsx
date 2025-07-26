@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { WeHaveSectionData } from '../../data/weHaveSection';
 import { Container } from '../Container';
 import { DescText } from '../DescText';
+import { Subheading } from '../Subheading';
 import { WeHaveSectionIcon } from './WeHaveSectionIcon';
 
 export const WeHaveSection = () => {
@@ -27,13 +28,7 @@ export const WeHaveSection = () => {
                     width={item.width}
                   />
                 </div>
-                <h3
-                  className={clsx(
-                    'text-lg leading-[170%] font-medium md:text-3xl'
-                  )}
-                >
-                  {item.title}
-                </h3>
+                <Subheading variant="secondary">{item.title}</Subheading>
                 <DescText variant="secondary">{item.description}</DescText>
               </div>
             ))}

@@ -72,33 +72,43 @@
       var(--gradient-dark) border-box;
   }
 
-  /* .hero-gradient-ellipse {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-    background: var(--gradient-background);
-    border-radius: 50%;
-    z-index: -1;
-    opacity: 0.2;
-  } */
+  .border-gradient-dark-corner-fade {
+    position: relative;
+    border: 1px solid transparent;
+    background:
+      linear-gradient(var(--background), var(--background)) padding-box,
+      linear-gradient(
+          405deg,
+          transparent 0%,
+          #dadada 25%,
+          #dadada 75%,
+          transparent 100%
+        )
+        border-box;
+    transition: background 0.3s ease;
+  }
 
-  /* .hero-image-with-bg::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/assets/svg/ui-elements/wave-lines-hero.svg');
-    background-repeat: no-repeat;
-    background-position: right top 7rem;
-    background-size: contain;
-    z-index: -2;
-    pointer-events: none;
-  } */
+  .border-gradient-dark-corner-fade:hover {
+    background:
+      linear-gradient(var(--background), var(--background)) padding-box,
+      linear-gradient(
+          405deg,
+          transparent 0%,
+          #237249 25%,
+          #35c66b 75%,
+          transparent 100%
+        )
+        border-box;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 body {
