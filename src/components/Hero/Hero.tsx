@@ -19,7 +19,10 @@ export const Hero = () => {
         >
           <HeroImageWithTag className={clsx('md:order-2')} />
           <div className={clsx('flex flex-col gap-9 lg:w-[60%]')}>
-            <SectionHeader />
+            <SectionHeader highlightedText="Starbucks">
+              New Cafe <br />
+              by
+            </SectionHeader>
             <DescText>
               Have time to buy the most harmonious drinks in the
               <br /> new Starbucks coffee and don&apos;t forget about the

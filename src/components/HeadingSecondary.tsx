@@ -1,6 +1,16 @@
 import clsx from 'clsx';
 
-export const HeadingSecondary = () => {
+interface HeadingSecondaryProps {
+  children: React.ReactNode;
+  highlightedText?: string;
+  highlightClassName?: string;
+}
+
+export const HeadingSecondary = ({
+  children,
+  highlightedText,
+  highlightClassName = 'text-gradient-green',
+}: HeadingSecondaryProps) => {
   return (
     <h2
       className={clsx(
@@ -8,8 +18,13 @@ export const HeadingSecondary = () => {
         'text-[var(--color-text)]'
       )}
     >
-      We make <br />
-      <span className="text-gradient-green">delicious</span>
+      {children}
+      {highlightedText && (
+        <>
+          {' '}
+          <span className={highlightClassName}>{highlightedText}</span>
+        </>
+      )}
     </h2>
   );
 };

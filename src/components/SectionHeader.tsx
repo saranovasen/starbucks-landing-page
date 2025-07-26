@@ -1,6 +1,16 @@
 import clsx from 'clsx';
 
-export const SectionHeader = () => {
+interface SectionHeaderProps {
+  children: React.ReactNode;
+  highlightedText?: string;
+  highlightClassName?: string;
+}
+
+export const SectionHeader = ({
+  children,
+  highlightedText,
+  highlightClassName = 'text-gradient-green',
+}: SectionHeaderProps) => {
   return (
     <h1
       className={clsx(
@@ -8,8 +18,13 @@ export const SectionHeader = () => {
         'text-[var(--color-text)]'
       )}
     >
-      New Cafe <br />
-      by <span className="text-gradient-green">Starbucks</span>
+      {children}
+      {highlightedText && (
+        <>
+          {' '}
+          <span className={highlightClassName}>{highlightedText}</span>
+        </>
+      )}
     </h1>
   );
 };
