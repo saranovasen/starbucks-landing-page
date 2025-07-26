@@ -8,7 +8,7 @@ export const HeroStats = () => {
   return (
     <div className="flex gap-9">
       {statsData.map((stat, key) => (
-        <p key={key} className="text-sm text-[var(--color-text)] md:text-xl">
+        <p key={key} className="text-sm text-[var(--color-text)] md:text-lg">
           <span className="text-big">
             {stat.value}
             <span className="text-gradient-green">+</span>

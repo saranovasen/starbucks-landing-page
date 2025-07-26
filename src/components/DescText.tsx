@@ -10,7 +10,7 @@ export const DescText = ({ children, variant = 'primary' }: DescTextProps) => {
       : 'text-[var(--text-dark)]';
 
   return (
-    <p className={`text-xs whitespace-pre-line md:text-xl ${textColor}`}>
+    <p className={`text-xs whitespace-pre-line md:text-lg ${textColor}`}>
       {children}
     </p>
   );
