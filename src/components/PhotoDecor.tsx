@@ -7,6 +7,8 @@ interface PhotoDecorProps {
   photoAlt: string;
   width?: number;
   height?: number;
+  decorClassName?: string;
+  photoClassName?: string;
   className?: string;
 }
 
@@ -17,23 +19,25 @@ export const PhotoDecor = ({
   photoAlt,
   width = 465,
   height = 684,
-  className = 'h-auto w-41 lg:w-116',
+  decorClassName,
+  photoClassName,
+  className,
 }: PhotoDecorProps) => {
   return (
-    <div className="relative">
+    <div className={`${className} relative pt-7`}>
       <Image
         src={decorSrc}
         alt={decorAlt}
         width={width}
         height={height}
-        className={className}
+        className={`${decorClassName} relative h-auto`}
       />
       <Image
         src={photoSrc}
         alt={photoAlt}
         width={width}
         height={height}
-        className={`absolute bottom-4 left-4 z-10 drop-shadow-[-8px_8px_10px_rgba(0,0,0,0.50)] lg:bottom-9 lg:left-11 ${className}`}
+        className={`${photoClassName} absolute z-10 h-auto`}
       />
     </div>
   );

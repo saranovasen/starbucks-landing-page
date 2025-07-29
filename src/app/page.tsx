@@ -1,3 +1,4 @@
+import { ContactsSection } from '@/components/ContactsSection/ContactsSection';
 import { Hero } from '@/components/Hero/Hero';
 import { NewEventsSection } from '@/components/NewEventsSection/NewEventsSection';
 import { NewProductsSection } from '@/components/NewProductsSection/NewProductsSection';
@@ -12,6 +13,7 @@ export default function Home() {
       <WeMakeDeliciousSection />
       <NewProductsSection />
       <NewEventsSection />
+      <ContactsSection />
     </div>
   );
 }

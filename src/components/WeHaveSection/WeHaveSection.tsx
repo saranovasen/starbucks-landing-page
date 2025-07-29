@@ -8,7 +8,7 @@ import { WeHaveSectionIcon } from './WeHaveSectionIcon';
 
 export const WeHaveSection = () => {
   return (
-    <section className="mb-18 md:mb-40">
+    <section className="mb-16 md:mb-27">
       <Container>
         <div className="bg-ui-light mx-auto w-[60%] max-w-screen-lg rounded-[1.75rem] px-10.5 py-5 md:w-[80%] xl:px-25 xl:py-10">
           <div

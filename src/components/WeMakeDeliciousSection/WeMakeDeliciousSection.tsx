@@ -12,6 +12,8 @@ export const WeMakeDeliciousSection = () => {
           decorAlt="Photo decor"
           photoSrc="/assets/png/photos/branch-interior.png"
           photoAlt="Photo of a branch interior"
+          decorClassName="w-41 lg:w-116"
+          photoClassName="w-64 lg:w-112 bottom-4 left-4 drop-shadow-[-8px_8px_10px_rgba(0,0,0,0.50)] lg:left-11 lg:bottom-9"
         />
         <div className="flex flex-col gap-9 md:gap-16">
           <HeadingSecondary highlightedText="delicious">
