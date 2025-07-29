@@ -25,7 +25,11 @@ export const WeHaveSectionIcon = ({
         height={200}
         src={src}
         alt={alt}
-        className={clsx('absolute h-auto self-center', width)}
+        className={clsx(
+          'absolute h-auto self-center',
+          width,
+          'transition-transform duration-300 hover:scale-105'
+        )}
       />
     </div>
   );

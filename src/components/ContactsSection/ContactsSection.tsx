@@ -14,8 +14,8 @@ export const ContactsSection = () => {
           photoSrc="/assets/png/photos/branch-exterior.png"
           photoAlt="Photo of a branch interior"
           decorClassName="w-40 lg:w-88 -scale-x-100"
-          photoClassName="w-40 lg:w-88 bottom-3 right-4 lg:right-9 lg:bottom-7 drop-shadow-[-8px_8px_10px_rgba(0,0,0,0.50)]"
-          className="lg:order-2"
+          photoClassName="w-40 lg:w-88 bottom-3 right-4 lg:right-9 lg:bottom-7 drop-shadow-[8px_8px_10px_rgba(0,0,0,0.50)]"
+          className="mb-9 self-end lg:order-2"
         />
         <div className="lg:gap:-13 flex flex-col gap-9">
           <SectionHeader highlightedText="Contacts">

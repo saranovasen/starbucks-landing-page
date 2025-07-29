@@ -8,20 +8,36 @@ export const HeroImageWithTag = ({ className }: { className?: string }) => {
       <Image
         width={256}
         height={344}
-        className="relative z-10 h-auto w-64 lg:w-90 xl:w-100"
+        className={clsx('relative z-10 h-auto', 'w-64 lg:w-90 xl:w-100')}
         src="/assets/png/ui-elements/coffee-cup.png"
         alt="Cup of Coffee"
       />
-      {/* <div className="absolute -top-2 -right-2 z-20 lg:-top-10">
+      <div
+        className={clsx(
+          'absolute z-20',
+          '-top-2 -right-0 -translate-x-3',
+          'lg:-top-10 lg:-translate-x-8',
+          'drop-shadow-[-8px_8px_10px_rgba(0,0,0,0.50)]'
+        )}
+      >
         <Image
+          width={187}
+          height={187}
           src="assets/svg/ui-elements/tag.svg"
           alt="Tag"
-          className="lg:w-50"
+          className={clsx('w-25 lg:w-37')}
         />
-        <span className="text-light absolute inset-0 flex translate-x-2 -translate-y-2 rotate-340 items-center justify-center text-2xl font-bold text-[var(--color-main-text)] lg:text-5xl">
+        <span
+          className={clsx(
+            'absolute inset-0 flex items-center justify-center',
+            'rotate-340',
+            'text-2xl lg:text-5xl',
+            'font-medium text-[var(--color-main-text)]'
+          )}
+        >
           45%
         </span>
-      </div> */}
+      </div>
     </div>
   );
 };
