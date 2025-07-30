@@ -24,7 +24,7 @@ export const PhotoDecor = ({
   className,
 }: PhotoDecorProps) => {
   return (
-    <div className={`${className} relative pt-7`}>
+    <div className={`${className} relative mt-7`}>
       <Image
         src={decorSrc}
         alt={decorAlt}

@@ -19,7 +19,7 @@ export const NewEventsSection = () => {
             <br /> 2022 we are ready to destroy the market
           </DescText>
         </div>
-        <div className="overflow-x-auto lg:overflow-visible">
+        <div className="scrollbar-hide overflow-x-auto lg:overflow-visible">
           <div className="min-w-max lg:min-w-0">
             <div className="grid grid-cols-2 gap-6">
               <NewEventCard

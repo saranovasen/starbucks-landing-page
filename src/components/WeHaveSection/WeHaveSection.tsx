@@ -10,7 +10,7 @@ export const WeHaveSection = () => {
   return (
     <section className="mb-16 md:mb-27">
       <Container>
-        <div className="bg-ui-light mx-auto w-[60%] max-w-screen-lg rounded-[1.75rem] px-10.5 py-5 md:w-[80%] xl:px-25 xl:py-10">
+        <div className="bg-ui-light mx-auto w-[60%] max-w-screen-lg rounded-[1.75rem] px-10.5 py-5 md:w-[100%] lg:w-[80%] xl:px-25 xl:py-10">
           <div
             className={clsx(
               'flex flex-col gap-6 md:flex-row md:justify-between'

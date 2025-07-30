@@ -51,7 +51,7 @@ export const SwiperCard = ({
         <Subheading>{title}</Subheading>
         <DescText align="center">{description}</DescText>
         <div className="flex w-full items-baseline justify-between">
-          <p className="text-lg text-[var(--color-text)] lg:text-3xl">
+          <p className="text-lg font-medium text-[var(--color-text)] lg:text-3xl">
             {price}
           </p>
           <DescText>{size}</DescText>

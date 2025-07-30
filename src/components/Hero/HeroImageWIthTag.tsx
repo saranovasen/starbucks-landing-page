@@ -12,6 +12,17 @@ export const HeroImageWithTag = ({ className }: { className?: string }) => {
         src="/assets/png/ui-elements/coffee-cup.png"
         alt="Cup of Coffee"
       />
+      {/* <Image
+        width={910}
+        height={676}
+        src="/assets/svg/ui-elements/wave-lines-hero.svg"
+        alt="Wave lines decoration"
+        className={clsx(
+          'absolute z-[-5]',
+          'translate-x-5 -translate-y-50',
+          'scale-160 md:scale-200'
+        )}
+      /> */}
       <div
         className={clsx(
           'absolute z-20',
