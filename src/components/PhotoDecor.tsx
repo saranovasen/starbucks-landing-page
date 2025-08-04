@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Image from 'next/image';
 
 interface PhotoDecorProps {
@@ -24,7 +25,7 @@ export const PhotoDecor = ({
   className,
 }: PhotoDecorProps) => {
   return (
-    <div className={`${className} relative mt-7`}>
+    <div className={`${className} relative mt-7 w-fit`}>
       <Image
         src={decorSrc}
         alt={decorAlt}
