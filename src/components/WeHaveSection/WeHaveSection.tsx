@@ -37,7 +37,7 @@ export const WeHaveSection = () => {
           <div
             className={clsx(
               'absolute z-20',
-              '-top-10 -right-12 -translate-x-3',
+              '-top-10 -left-12 -translate-x-3',
               'lg:-top-15 lg:-left-10 lg:-translate-x-8',
               'drop-shadow-[-8px_8px_10px_rgba(0,0,0,0.50)]'
             )}
