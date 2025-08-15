@@ -67,10 +67,12 @@ export const WeMakeDeliciousSection = () => {
             <br /> 2022 we are ready to destroy the market
           </DescText>
           <iframe
-            src="https://www.youtube.com/embed/watch?v=CMmFG-GXNZ0"
+            src="https://www.youtube-nocookie.com/embed/CMmFG-GXNZ0"
             title="YouTube Video"
             allow="autoplay; encrypted-media"
             allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
             className={clsx('h-41 w-64 shadow-lg md:h-69 md:w-112')}
           />
         </div>
